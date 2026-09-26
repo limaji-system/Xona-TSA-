@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>XonaTSA - Conditions d'utilisation</title>
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: #000;
+    color: #e8e8e8;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+  }
+  .skip-link {
+    position: absolute;
+    top: -60px;
+    left: 12px;
+    background: #fff;
+    color: #000;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    z-index: 100;
+    transition: top .2s;
+  }
+  .skip-link:focus { top: 12px; }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: #000;
+    border-bottom: 1px solid #262626;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    z-index: 10;
+  }
+  header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  header svg { width: 22px; height: 22px; stroke: #fff; fill: none; stroke-width: 2; }
+  header h1 { font-size: 16px; letter-spacing: 1px; margin: 0; color: #fff; }
+
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 28px 20px 80px;
+  }
+  main h2 { color: #fff; font-size: 17px; margin: 28px 0 8px; }
+  main p, main li { color: #b3b3b3; font-size: 14px; }
+  .updated { color: #6f6f6f; font-size: 12px; margin-bottom: 24px; }
+
+  .back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #fff;
+    border: none;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0,0,0,.4);
+  }
+  .back-to-top.show { display: flex; }
+  .back-to-top svg { width: 20px; height: 20px; stroke: #000; fill: none; stroke-width: 2.4; }
+</style>
+</head>
+<body id="top">
+
+  <a class="skip-link" href="#content">Aller au contenu</a>
+
+  <header>
+    <button type="button" onclick="window.location.href='page3.html'" aria-label="Retour">
+      <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <h1>CONDITIONS D'UTILISATION</h1>
+  </header>
+
+  <main id="content">
+    <p class="updated">Dernière mise à jour : à compléter</p>
+
+    <h2>1. Acceptation des conditions</h2>
+    <p>En créant un compte ou en utilisant XonaTSA, vous acceptez les présentes conditions d'utilisation dans leur intégralité.</p>
+
+    <h2>2. Utilisation du service</h2>
+    <p>XonaTSA permet aux organisations événementielles de proposer et de vendre des tickets numériques directement aux participants. Vous vous engagez à fournir des informations exactes lors de la création d'un événement ou d'un compte.</p>
+
+    <h2>3. Comptes utilisateurs</h2>
+    <p>Vous êtes responsable de la confidentialité de vos identifiants et de toute activité effectuée depuis votre compte.</p>
+
+    <h2>4. Achats et remboursements</h2>
+    <p>Les conditions d'achat, d'annulation et de remboursement des tickets sont précisées lors de chaque transaction et peuvent varier selon l'organisateur de l'événement.</p>
+
+    <h2>5. Responsabilités</h2>
+    <p>XonaTSA agit comme intermédiaire technique entre les organisateurs et les participants et ne saurait être tenu responsable du déroulement des événements listés.</p>
+
+    <h2>6. Modification des conditions</h2>
+    <p>Ces conditions peuvent être mises à jour. Les utilisateurs seront informés de tout changement important.</p>
+  </main>
+
+  <button class="back-to-top" id="toTop" type="button" aria-label="Retour en haut">
+    <svg viewBox="0 0 24 24"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script>
+    var btn = document.getElementById('toTop');
+    window.addEventListener('scroll', function () {
+      btn.classList.toggle('show', window.scrollY > 300);
+    });
+    btn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
